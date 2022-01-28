@@ -1,13 +1,11 @@
 # Msnger
 Let everyone twit its messages!
-
-  Hello and welcome to Msnger!<br><br>
      
-  Msnger is a light and simple software on premise to twit short/long messages.<br><br>
+  Msnger is a light and simple software on premise to twit short/long messages.
      
-  Msnger is released under GPLv3 license, it is supplied AS-IS and we do not take any responsibility for its misusage.<br><br>
+  Msnger is released under GPLv3 license, it is supplied AS-IS and we do not take any responsibility for its misusage.
   
-  First step, use the left side panel password and salt fields to create the hash to insert in the config file. Remember to manually set there also the salt value.<br><br>
+  First step, use the left side panel password and salt fields to create the hash to insert in the config file. Remember to manually set there also the salt value.
      
   As you are going to run Msnger in the PHP process context, using a limited web server or phpfpm user, you must follow some simple directives for an optimal first setup:<br>
   <ol>
