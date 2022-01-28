@@ -19,7 +19,5 @@ Let everyone twit its messages!
   </ul>
   </ol>
   
-  <br>	
-
   Hope you can enjoy it and let us know about any feedback: <a href="mailto:info@msnger.org" style="color:#e6d236;">info@msnger.org</a>
 	   
