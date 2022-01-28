@@ -1,0 +1,109 @@
+<?php
+
+/**
+ * Copyright 2021, 2024 5 Mode
+ *
+ * This file is part of Msnger.
+ *
+ * Msnger is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Msnger is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.  
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with Msnger. If not, see <https://www.gnu.org/licenses/>.
+ *
+ * config.inc
+ * 
+ * Msnger configuration settings.
+ *
+ * @author Daniele Bonini <my25mb@aol.com>
+ * @copyrights (c) 2021, 2024, 5 Mode     
+ */
+
+define('DEBUG', true);
+ 
+define('APP_NAME', "Msnger");
+
+define('APP_TITLE', "Msnger");
+define('APP_DESCRIPTION', "Welcome to Msnger! Let everyone twit their messages.");
+define('APP_KEYWORDS', "msnger,twit,messages,directory,on,premise,solution");
+
+// password: yourpassword
+// salt: yoursalt
+define('APP_HASH', "");
+
+define('APP_SPLASH', true);
+
+define('APP_PATH', "/var/www/YourWebApp");
+define('APP_DATA_PATH', "/var/www/YourWebApp/data");
+define('APP_SALT', "yoursalt");
+// Default Locale, in two letters format
+define('APP_LOCALE', "EN");
+define('APP_CUSTOM_HEADER', "");
+// App uses: PRIVATE or BUSINESS
+define('APP_USE', "PRIVATE");
+define('APP_GUEST_MSG', "This is a private event list, please login");
+define('APP_WELCOME_MSG', "Welcome to your event list:");
+// Max signs from a single client
+define('APP_MAX_FROM_IP', 5);
+// Default Context: 'PRIVATE' or 'PUBLIC'
+define('APP_DEFAULT_CONTEXT', "PRIVATE");
+
+define('DISPLAY_DATE_FONT', "Nova Mono");
+define('DISPLAY_SUBMIT_BUTTON', "Send");
+define('DISPLAY_BODY_CSS', "font-family: Monospace, Verdana, Serif;");
+
+define('CMDLINE_VALIDCMDS', "~|sign|del|conf|refresh|");
+
+define('HISTORY_MAX_ITEMS', 100);
+
+$CONFIG = [
+
+   'DEBUG' => true,
+
+   'APP' => [
+      'NAME' => "Msnger",
+      'TITLE' => "Msnger",
+      'DESCRIPTION' => "Welcome to Msnger! Let everyone twit their messages.",
+      'KEYWORDS' => "msnger,twit,messages,directory,on,premise,solution",
+      // password: yourpassword
+      // salt: yoursalt
+      'HASH' => "",  
+      'SPLASH' => true,
+      'PATH' => "/var/www/YourWebApp",
+      'DATA_PATH' => "/var/www/YourWebApp/data",
+      'SALT' => "yoursalt",
+      // Default Locale, in two letters format
+      'LOCALE' => "EN",
+      'CUSTOM_HEADER' => "",
+      // App use: PRIVATE or BUSINESS
+      'USE' => "PRIVATE",
+      'GUEST_MSG' => "This is a private event list, please login",
+      'WELCOME_MSG' => "Welcome to your twits:",
+      // Max signs from a single client
+      'MAX_FROM_IP' =>  5,
+      // Default Context: 'PRIVATE' or 'PUBLIC'
+      'DEFAULT_CONTEXT' => "PRIVATE"
+      ],
+    
+    'DISPLAY' => [
+      'NAME_FONT' => "Nova Mono",
+      'SUBMIT_BUTTON' => "Send",
+      'BODY_CSS' => "font-family: Monospace, Verdana, Serif;"
+      ],
+     
+    'CMDLINE' => [
+       'VALIDCMDS' => "~|sign|del|conf|refresh|"  
+      ],    
+      
+    'HISTORY' => [
+     'MAX_ITEMS' => 100
+      ]  
+    ];  
+
