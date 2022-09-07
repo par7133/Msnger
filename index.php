@@ -778,7 +778,7 @@
 
     <?php if(APP_USE === "BUSINESS"): ?>    
     <div style="font-size:23px">
-      <a id="ahome" href="http://msnger.org" target="_blank" style="color:black;"><img id="logo-hl" src="/MSN_res/MSNlogo.png" style="position:relative;top:-25px;width:48px;margin:5px;">Powered by Msnger</a>
+      <a id="ahome" href="https://par7133.github.io/Msnger/" target="_blank" style="color:black;"><img id="logo-hl" src="/MSN_res/MSNlogo.png" style="position:relative;top:-25px;width:48px;margin:5px;">Powered by Msnger</a>
     </div>
     <?php endif; ?>&nbsp;
        
