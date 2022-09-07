@@ -1,5 +1,4 @@
 # Msnger
-Let everyone twit its messages!
      
   Msnger is a light and simple software on premise to twit short/long messages.
      
