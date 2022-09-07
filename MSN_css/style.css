@@ -94,7 +94,7 @@ body {
 .header {
   height: 65px;
   vertical-align: middle;
-  border-bottom: 1px solid #2c2f34;
+  border-bottom: 0px solid #2c2f34;
   padding: 8px;
 }
 .friend-header-ve  {
