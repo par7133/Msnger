@@ -59,8 +59,12 @@
     //$("#HCsplash").hide("slow");
     $(document.body).css("background","#ffffff");
     $("#frmHC").show();
-  }			
-
+  }
+	  
+  function _startApp() {
+    setTimeout("startApp()", 1000);    
+  }
+	   	  
   window.addEventListener("load", function() {
 	
     $("#frmHC").hide();
