@@ -49,13 +49,13 @@
   <link href="/MSN_css/style.css" type="text/css" rel="stylesheet">
 
   <script>
-  		  
   function hideTitle() {
     $("#myh1").hide("slow");
   }
   
   function startApp() {
     $("#HCsplash").css("display","none");
+	  
     //$("#HCsplash").hide("slow");
     $(document.body).css("background","#ffffff");
     $("#frmHC").show();
@@ -64,10 +64,13 @@
   window.addEventListener("load", function() {
 	
     $("#frmHC").hide();
-    $(document.body).css("background","#000000");
-    $("#HCsplash").show("slow");	  
-    setTimeout("hideTitle()", 2000);
-    setTimeout("startApp()", 4000);
+	  
+    //Splash	  
+    $("#HCsplash").show();
+	  
+    //$(document.body).css("background","#000000");	  
+    //setTimeout("hideTitle()", 2000);
+    //setTimeout("startApp()", 4000);
 
   }, true);
 
@@ -77,11 +80,10 @@
     setTimeout("_startApp()", 6000);
   
   });	  
-	  
   </script>    
        
 </head>
-<body>
+<body style="background:#0d0d0d;">
 
 <div id="HCsplash" style="padding-top: 160px; text-align:center;color:#ffffff;display:none;">
    <div id="myh1"><H1>Msnger</H1></div><br>
