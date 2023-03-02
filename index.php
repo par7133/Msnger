@@ -486,22 +486,28 @@
  $signHistory = file($curPath . DIRECTORY_SEPARATOR . ".MSN_history");
  $captchaHistory = file($curPath . DIRECTORY_SEPARATOR . ".MSN_captchahistory");
 
- $password = filter_input(INPUT_POST, "Password");
+ $password = filter_input(INPUT_POST, "Password")??"";
+ $password = strip_tags($password);
  if ($password==PHP_STR) {
-   $password = filter_input(INPUT_POST, "Password2");
+   $password = filter_input(INPUT_POST, "Password2")??"";
+   $password = strip_tags($password);
  }  
- $command = filter_input(INPUT_POST, "CommandLine");
+ $command = filter_input(INPUT_POST, "CommandLine")??"";
+ $command = strip_tags($command);
  
  //$pwd = filter_input(INPUT_POST, "pwd"); 
- $hideSplash = filter_input(INPUT_POST, "hideSplash");
- $hideHCSplash = filter_input(INPUT_POST, "hideHCSplash");
+ $hideSplash = filter_input(INPUT_POST, "hideSplash")??"";
+ $hideSplash = strip_tags($hideSplash);
+ $hideHCSplash = filter_input(INPUT_POST, "hideHCSplash")??"";
+ $hideHCSplash = strip_tags($hideHCSplash);
 
- $date = filter_input(INPUT_POST, "date");
- $desc = filter_input(INPUT_POST, "desc");
+ $date = filter_input(INPUT_POST, "date")??"";
+ $desc = filter_input(INPUT_POST, "desc")??"";
 
  $captchasign = hash("sha256", $_SERVER["REMOTE_ADDR"] . date("Y") . APP_SALT, false);
  
- $lastMessage = filter_input(INPUT_POST, "last_message");
+ $lastMessage = filter_input(INPUT_POST, "last_message")??"";
+ $lastMessage = strip_tags($lastMessage);
  $totsigns = count($signHistory);
  //print_r($totsigns);
  //exit(0);
@@ -509,7 +515,8 @@
    $lastMessage = hash("sha256", rtrim($signHistory[$totsigns-1],"\n") . APP_SALT, false);
  }   
 
- $captchacount = (int)filter_input(INPUT_POST, "captcha_count");
+ $captchacount = (int)filter_input(INPUT_POST, "captcha_count")??"";
+ $captchacount = strip_tags($captchacount);
  //if ($captchacount === 0) {
  //  $captchacount = 1;
  //}  
@@ -630,7 +637,7 @@
 
 <?php if(APP_USE === "PRIVATE"): ?>
 <div class="header" style="background-color:#ffffff;z-index:90;">
-   <a id="burger-menu" href="#" style="display:none;"><img src="./MSN_res/burger-menu2.png" style="width:58px;"></a><a id="ahome" href="https://par7133.github.io/Msnger/" target="_blank" style="color:black; text-decoration: none;"><img id="logo-hl" src="./MSN_res/MSNlogo.png" style="width:48px;">&nbsp;Msnger</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="agithub" href="https://github.com/par7133/Msnger" style="color:#000000"><span style="color:#119fe2">on</span> github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="afeedback" href="mailto:my25mb@aol.com" style="color:#000000"><span style="color:#119fe2">for</span> feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="asupport" href="tel:+39-331-4029415" style="font-size:13px;background-color:#15c60b;border:2px solid #15c60b;color:black;height:27px;text-decoration:none;">&nbsp;&nbsp;get support&nbsp;&nbsp;</a><div id="pwd2" style="float:right;position:relative;top:+13px;display:none"><input type="password" id="Password2" name="Password2" placeholder="password" style="font-size:13px; background:#393939; color:#ffffff; width: 125px; border-radius:3px;" value="" autocomplete="off"></div>	
+   <a id="burger-menu" href="#" style="display:none;"><img src="/MSN_res/burger-menu2.png" style="width:58px;"></a><a id="ahome" href="http://homolog.org" target="_blank" style="color:black; text-decoration: none;"><img id="logo-hmm" src="/MSN_res/HLlogo.png" style="width:48px;">&nbsp;Homolog</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="agithub" href="https://github.com/par7133/Homolog" style="color:#000000"><span style="color:#119fe2">on</span> github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="afeedback" href="mailto:info@homolog.org" style="color:#000000"><span style="color:#119fe2">for</span> feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="asupport" href="tel:+39-331-4029415" style="font-size:13px;background-color:#15c60b;border:2px solid #15c60b;color:black;height:27px;text-decoration:none;">&nbsp;&nbsp;get support&nbsp;&nbsp;</a><div id="pwd2" style="float:right;position:relative;top:+13px;display:none"><input type="password" id="Password2" name="Password2" placeholder="password" style="font-size:13px; background:#393939; color:#ffffff; width: 125px; border-radius:3px;" value="" autocomplete="off"></div>
 </div>
 <?php else: ?>
 <div class="header2" style="margin:0;padding:0;border-bottom:0px;text-align:center;">
@@ -704,7 +711,7 @@
 	   
 	   <br>	
      
-	   Hope you can enjoy it and let us know about any feedback: <a href="mailto:my25mb@aol.com" style="color:#e6d236;">my25mb@aol.com</a>
+	   Hope you can enjoy it and let us know about any feedback: <a href="mailto:info@msnger.org" style="color:#e6d236;">info@msnger.org</a>
 	   
 	</div>	
 	<?php endif; ?>
@@ -778,7 +785,7 @@
 
     <?php if(APP_USE === "BUSINESS"): ?>    
     <div style="font-size:23px">
-      <a id="ahome" href="https://par7133.github.io/Msnger/" target="_blank" style="color:black;"><img id="logo-hl" src="/MSN_res/MSNlogo.png" style="position:relative;top:-25px;width:48px;margin:5px;">Powered by Msnger</a>
+      <a id="ahome" href="http://msnger.org" target="_blank" style="color:black;"><img id="logo-hl" src="/MSN_res/MSNlogo.png" style="position:relative;top:-25px;width:48px;margin:5px;">Powered by Msnger</a>
     </div>
     <?php endif; ?>&nbsp;
        
